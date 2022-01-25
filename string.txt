@@ -1,0 +1,81 @@
+ky tu cuoi cung trong chuoi la null: \0: luon phai + them 1 gia tri null
+
+khai bao
+char c[] = "text";
+char c[50] = "text";
+char c[] = {'t', 'e', 'x', 't', '\0'}
+
+//// khong the khai bao kieu nay: 
+char c[100];
+c = "test";
+phai khai bao luon: char c[100]= "test";
+////////////////////////
+cac ham nhap chuooi
+scanf("%s", tenmang); // chi nhap chuoi k chua khoang trang
+fgets(tenmang, sizeof(tenmang), stdin); doc 1 chuoi bao gom ca khoang trang
+
+//////////////////
+ham xuat chuoi
+printf("%s" , tenmang); xuat mang ky tu nhung k xuong dong
+puts(tenmang); // xuat mot mang ra man hinh + xuong dong
+
+//////////////// 
+ly do k nhap duoc chuoi: do  ky tu xuong dong \n trng ham scanf
+vidu: 
+    scanf("%d", &tuoi);
+    fgets(tenmang, sizeof(tenmang), stdin);
+
+    nhap: tuoi = 15\n
+    => tuoi = 15
+    tenmang = "\n"
+
+cac khac phuc: them ham getchar() sau moi ham scanf();
+
+///////////////////////
+tim lenght cua chuoi khi nhap vao se phai tru di 1 don vidu
+strlen() - 1;
+//////////////////
+ham noi chuoi 
+strcat();
+cấu trúc: char *strcat(char *destination, const char *source)
+sao chép nội dung từ *source và nối vào *destination.
+kích thước của chuỗi đích phải đủ lớn để lưu đc 2 chuỗi.
+
+////////////////
+ham copy
+strcpy();
+cấu trúc: char *strcpy(char *destination, const char *source)
+sao chép nội dung từ *source vào *destination.
+
+//////////////
+hamf so sánh
+strcmp()
+int strcmp(const char* str1, const char* str2);
+nếu ký tự đầu tiên của 2 chuỗi bằng nhau thì ký tự tiếp theo cảu 2 chuỗi đc so sánh
+so sánh đến khi khác, hoặc gpawj nullư
+
+return 0: bằng nhau
+return -1: nếu giá trị assci của ký tự khác nhau đầu tiên nhỏ hơn: s1 > s2
+return 1: nếu giá trị assci của ký tự khác nhau đầu tiên lớn hơn: s1>s2
+
+/////////////////
+ham chuyen toan bo chu thanh viet hao
+strupr() chuyển 1 chuỗi thành chữ viết hao
+strlwr() chuyển 1 chuỗi thành viết thường
+char * strupr(char * str)
+char * strlwr(char * str)
+
+////////// 
+ham dao nguoc chuoi 
+strrev()
+/////////////
+ham tim kiem ky tu
+char *strchr(const char *str, int c);
+tìm kiếm vị trí đầu tiên xuất hiện ký tự c
+kết quả tra về một con trỏ đc xuất hiện đầu tiền của ký tự C trong chyooix
+hoặc null NÉU k tìm đc ký tự đó
+
+//////////////
+tim chuoi trong chuoi
+strstr(const char *str, const char *substr)
+Hàm trả về con trỏ, trỏ đến vị trí xuất hiện đầu tiên của chuỗi con, neu k co tra ve null

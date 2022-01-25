@@ -1,0 +1,38 @@
+2 dang file
+- file txt
+- file bin
+
+ Lam viec voi file
+ FILE *fptr
+
+ ham 
+ fopen(): mo file 
+ fprintf(): ghi du lieu vao file
+ fscanf(): doc du lieu tu file
+ fputc(): ghi 1 ky tu vao file
+ fgetc(): doc 1 ky tu tu file
+ fclose(): dong file
+ fseek(): dua con tro tap tin vao vi tri da cho
+ fputw(): ghi mot so nguyen vao file
+ fgetw(): doc 1 so nguyen tu file
+ ftell(): rta ve vi tri hien tai
+ rewind(): dat con tro tap tin vao dau tap tin
+
+ ///////////////
+ mo file
+ FILE *fptf;
+ fptf = fopen("file.txt","mode"); mode : w,r,a(che do them noi dung vao noi dung co san)
+ fptf = fopen("oldfile.bin","rb"): r read, b bin
+
+ mode: r+, w+, a+: mo file che do doc va ghi
+ rb,wb,ab: tuong tu o che do bin
+ rb+,wb+,ab+: tuong tu o che do bin
+ 
+ ///////////////
+ ghi du lieu dang nhi phan
+ fwrite(addressdata,sizedata,numbersData,poitertofile);
+ fread(addressdata,sizedata,numbersData,poitertofile);
+
+ //////////////
+ ham kiem tra file con hay khong
+feof(f); doc file den khi k con
